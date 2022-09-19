@@ -1,0 +1,147 @@
+.portfolio-wrapper
+    display: flex
+    justify-content: space-between
+    &-left
+        width: 24%
+        background: #2c2b2b
+        padding-bottom: 2rem
+        border-radius: 2rem
+        border: .1rem solid #6e6666
+        &-img
+            margin: 1rem auto
+            width: 18rem
+            img
+                width: 100%
+                border-radius: 50%
+        &-name
+            text-align: center
+            font-size: 2.8rem
+            font-weight: bold
+            span
+                display: block
+                animation-name: leftToRight
+                animation-duration: 1.7s
+                animation-delay: 3s
+                animation-timing-function: ease
+                backface-visibility: hidden
+        &-position
+            text-align: center
+            margin: 0 auto
+            font-size: 2rem
+            width: 25rem
+            padding: .4rem
+            margin-bottom: 5rem
+            animation-name: rightToLeft
+            animation-duration: 1.7s
+            animation-delay: 3s
+            animation-timing-function: ease
+            backface-visibility: hidden
+            span
+                transition: all .3s
+                // text-transform: uppercase
+                color: #314547
+                &:hover
+                    text-shadow: 0 0 10px #06f9fb
+                    0 0 30px #06f9fb
+                    0 0 80px #06f9fb
+                    color: #fff
+        &-contacts
+            width: 25rem
+            margin: 0 auto
+            margin-bottom: 5rem
+            li
+                margin-bottom: .4rem
+                i
+                    padding: 1rem
+                    background: #382e2e
+                    margin-right: 1rem
+                a
+                    font-size: 1.4rem
+        &-icons
+            display: flex
+            justify-content: space-around
+            width: 25rem
+            margin: 1rem auto
+            i
+                color: #6e6666
+                border-radius: 45%
+                transition: all .3s ease
+            .facebook:hover
+                text-shadow: 0 0 45px #2806b1
+            .git:hover
+                text-shadow: 0 0 45px orange
+            .telegram:hover
+                text-shadow: 0 0 45px #1220e4
+    &-right
+        width: 74%
+        background: #2c2b2b
+        padding: 1rem
+        border-radius: 2rem
+        border: .1rem solid #6e6666
+        &-list
+            font-family: 'Tomorrow'
+            font-size: 1.6rem
+            text-transform: uppercase
+            display: flex
+            justify-content: center
+            padding: 1rem
+            margin-left: 582px
+            gap: 3rem
+            width: 40%
+            background: #382e2e
+            margin-top: -10px
+            border-radius: 0px 20px 0px 20px
+            border: 1px solid #6e6666
+            border-top: none
+            border-right: none
+            li
+                position: relative
+                height: 100%
+                & a
+                    position: relative
+                    padding: 0 7px
+                    height: 100%
+                    color: #fff
+                    letter-spacing: 3px
+                    transition: .4s ease
+                    z-index: 3
+                    &::before
+                        @extend %line
+                        left: 0
+                        bottom: 76.66%
+                        z-index: 2
+                &::before
+                    @extend %line
+                    right: 0
+                    bottom: 42%
+                &::after
+                    @extend %line
+                    left: 0
+                    bottom: 0
+                &:hover
+                    a
+                        text-shadow: 1px 1px 5px #000
+                        &:before
+                            width: 100%
+                    &::before,
+                    &::after
+                        width: 100%
+        &-skills
+            display: flex
+            justify-content: center
+            gap: 4rem
+            width: 100%
+            flex-wrap: wrap
+            li div
+                width: 8rem
+                img
+                    width: 100%
+%line
+    content: ''
+    position: absolute
+    height: 42%
+    width: 0
+    background-color: #5b628f
+    transition: .4s ease
+    z-index: 0
+
