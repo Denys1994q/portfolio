@@ -20,7 +20,7 @@ const Resume = () => {
                 </div>
                 <div className="text">
                     <p className="upwork">Freelance: 
-                        <a href=" https://www.upwork.com/freelancers/~017a31f35385ec40b9"> Upwork</a>
+                        <a href=" https://www.upwork.com/freelancers/~017a31f35385ec40b9" target='_blank'>Upwork</a>
                     </p>
                 </div>
             </div>
