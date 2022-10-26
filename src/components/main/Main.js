@@ -28,7 +28,7 @@ const Main = () => {
     return (
         <div className='about'>
             <h2 className='about-title'>{aboutSpans}</h2>
-            <p className='about-subtitle'>During last 1.3 years I have been studying web-development technologies to become a front-end developer. Now I am searching for a professional team where I could develop my HTML, CSS, Javascript, React, Redux skills to achieve team results. Ready to compensate the lack of experience with a big desire to study.</p>
+            {/* <p className='about-subtitle'>During last 1.3 years I have been studying web-development technologies to become a front-end developer. Now I am searching for a professional team where I could develop my HTML, CSS, Javascript, React, Redux skills to achieve team results. Ready to compensate the lack of experience with a big desire to study.</p> */}
             <h3 className='about-subtitle-skills'>Skills:</h3>
             <ul className="portfolio-wrapper-right-skills">
                 <li>

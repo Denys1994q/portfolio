@@ -17,12 +17,10 @@
         &-3
         &-4
         &-title
-            // background: orange
             display: flex
             align-items: center
             justify-content: end
             column-gap: 1rem
-            margin-bottom: 1rem
             &-icon:hover
                 transition: all .4s ease
                 color: #d9d8d4
@@ -95,6 +93,30 @@
                 padding: .3rem
                 background: #382e2e
                 border: 1px solid #816767
+
+.chart
+    padding-top: 1rem
+    position: relative
+    width: 8rem
+    margin: 0 auto
+    margin-top: -1rem
+    margin-bottom: 1rem
+    &__text
+        color: #38E54D
+        padding-top: 1rem
+        font-size: 2rem
+        display: inline
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__title
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        left: -105%
+        font-size: 1.2rem
+        color: #888585
 
 ::-webkit-scrollbar
     width: .7rem

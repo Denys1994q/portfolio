@@ -29,13 +29,6 @@ const Resume = () => {
                     <i class="fa fa-book fa-2x"></i>
                     <p>Front-end studying:</p>
                 </div>
-                {/* <div className="text">
-                    <ul>
-                        <li>Full course on JavaScript + React - from scratch to the result Logo Udemy</li>
-                        <li>Intensive course React-2022</li>
-                        <li>Practical JavaScript (Advanced Level)</li>
-                    </ul>
-                </div> */}
                 <div className='text-courses'>
                     <div className='text-course'><img src={udemy} alt="" /></div>
                 </div>
