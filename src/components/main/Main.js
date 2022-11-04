@@ -2,6 +2,7 @@ import html from '../../images/html.png';
 import css from '../../images/css.png';
 import js from '../../images/js.png';
 import react from '../../images/react.png';
+import next from '../../images/next.png';
 import sass from '../../images/sass.png';
 import less from '../../images/less.png';
 import gitT from '../../images/gitT.png';
@@ -53,6 +54,11 @@ const Main = () => {
                     <li>
                         <div>
                             <img src={redux} alt="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src={next} alt="" />
                         </div>
                     </li>
                     <li>
