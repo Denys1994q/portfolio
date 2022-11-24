@@ -24,42 +24,17 @@ const Portfolio = () => {
             github: "https://github.com/Denys1994q/Pokemons-Redux",
             technologies: [
                 "react",
-                "react-redux",
                 "redux-toolkit",
                 "sass",
                 "grid",
                 "chart-js",
                 "react-select",
                 "react-lazy-load",
-                "react-loading-skeleton",
                 "react-spinners",
                 "react-transition-group",
+                "react-loading-skeleton",
                 "react-font-awesome",
-                "fetch",
-                "git",
-                "pokemons-api",
                 "vercel",
-            ],
-        },
-        {
-            name: "Pets",
-            description: "",
-            img: pets,
-            pageSpeed: 92,
-            deploy: "https://petsapi1994.herokuapp.com/",
-            github: "https://github.com/Denys1994q/test-task-CatsAPI",
-            technologies: [
-                "react",
-                "react-router-dom",
-                "node-sass",
-                "less",
-                "font-awesome",
-                "flex",
-                "grid",
-                "git",
-                "fetch",
-                "cat-api",
-                "heroku",
             ],
         },
         {
@@ -71,7 +46,7 @@ const Portfolio = () => {
             technologies: [
                 "react",
                 "redux-toolkit",
-                'next',
+                "next",
                 "sass",
                 "flex",
                 "grid",
@@ -85,6 +60,15 @@ const Portfolio = () => {
             ],
         },
         {
+            name: "Pets",
+            description: "",
+            img: pets,
+            pageSpeed: 92,
+            deploy: "https://petsapi1994.herokuapp.com/",
+            github: "https://github.com/Denys1994q/test-task-CatsAPI",
+            technologies: ["react", "react-router-dom", "sass", "flex", "grid", "git", "fetch", "heroku"],
+        },
+        {
             name: "Chat",
             description: "",
             img: chat,
@@ -93,7 +77,6 @@ const Portfolio = () => {
             github: "https://github.com/Denys1994q/chat_React",
             technologies: [
                 "react",
-                "node-sass",
                 "sass",
                 "flex",
                 "git",
@@ -101,14 +84,13 @@ const Portfolio = () => {
                 "chuck-norris-jokes-api",
                 "react-google-login",
                 "gapi-script",
-                "heroku",
             ],
         },
         {
             name: "Marvel",
             description: "",
             img: marvel,
-            deploy: "https://marvel-comics19.herokuapp.com/",
+            deploy: "",
             github: "https://github.com/Denys1994q/Project_React_marvelComics",
             technologies: [
                 "react",
@@ -120,7 +102,6 @@ const Portfolio = () => {
                 "fetch",
                 "helmet",
                 "marvel-api",
-                "heroku",
             ],
         },
         {
@@ -202,7 +183,7 @@ const Portfolio = () => {
             ],
         };
         return (
-            <div className={`potrfolio-grid-item potrfolio-grid-item-${i + 1}`}>
+            <div key={i} className={`potrfolio-grid-item potrfolio-grid-item-${i + 1}`}>
                 <div className='potrfolio-grid-item-title'>
                     {item.pageSpeed > 0 ? (
                         <div className='chart'>
@@ -213,7 +194,7 @@ const Portfolio = () => {
                     ) : null}
                     {item.deploy !== "" ? (
                         <a className='potrfolio-grid-item-title-icon' href={item.deploy} target='_blank'>
-                            <i class='fa fa-globe fa-2x'></i>
+                            <i className='fa fa-globe fa-2x'></i>
                         </a>
                     ) : null}
                     <a className='potrfolio-grid-item-title-icon' href={item.github} target='_blank'>
@@ -233,8 +214,12 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <ul className='potrfolio-grid-item-tecnhs'>
-                    {item.technologies.map(it => {
-                        return <li className='potrfolio-grid-item-tecnhs-item'>{it}</li>;
+                    {item.technologies.map((it, index) => {
+                        return (
+                            <li key={index} className='potrfolio-grid-item-tecnhs-item'>
+                                {it}
+                            </li>
+                        );
                     })}
                 </ul>
             </div>

@@ -1,15 +1,31 @@
-.portfolio-wrapper
+.container
+    max-width: 1400px
+    margin: 0 auto
+    padding: .2rem
+    @include respond(tab-land)
+        width: 100%
+    @include respond(big-screen)
+        width: 80%
+        max-width: none
+.first-page
     display: flex
+    align-items: start
+    flex-wrap: wrap
     justify-content: space-between
-    &-left
+    &__left
         width: 24%
         background: #2c2b2b
-        padding-bottom: 2rem
+        padding: 2rem 0
         border-radius: 2rem
         border: .1rem solid #6e6666
+        @include respond(tab-port)
+            width: 33%
+        @include respond(phoneL)
+            width: 100%
+            border-radius: 0
         &-img
             margin: 1rem auto
-            width: 18rem
+            max-width: 18rem
             img
                 width: 100%
                 border-radius: 50%
@@ -28,7 +44,7 @@
             text-align: center
             margin: 0 auto
             font-size: 2rem
-            width: 25rem
+            max-width: 25rem
             padding: .4rem
             margin-bottom: 5rem
             animation-name: rightToLeft
@@ -36,9 +52,10 @@
             animation-delay: 3s
             animation-timing-function: ease
             backface-visibility: hidden
+            @include respond(phoneL)
+                margin-bottom: 1rem
             span
                 transition: all .3s
-                // text-transform: uppercase
                 color: #314547
                 &:hover
                     text-shadow: 0 0 10px #06f9fb
@@ -46,38 +63,64 @@
                     0 0 80px #06f9fb
                     color: #fff
         &-contacts
-            width: 25rem
+            max-width: 25rem
             margin: 0 auto
             margin-bottom: 5rem
+            @include respond(tab-land)
+                text-align: center
+            @include respond(phoneL)
+                margin-bottom: 1rem
             li
                 margin-bottom: .4rem
+                a
+                @include respond(tab-land)
+                    display: block
+                @include respond(phoneL)
+                    display: inline-block
                 i
                     padding: 1rem
                     background: #382e2e
                     margin-right: 1rem
-                a
+                span
                     font-size: 1.4rem
         &-icons
             display: flex
             justify-content: space-around
-            width: 25rem
+            max-width: 25rem
             margin: 1rem auto
             i
                 color: #6e6666
                 border-radius: 45%
                 transition: all .3s ease
             .facebook:hover
-                text-shadow: 0 0 45px #2806b1
+                text-shadow: 0 0 55px #6342e9
             .git:hover
-                text-shadow: 0 0 45px orange
+                text-shadow: 0 0 55px #ffac5e
             .telegram:hover
-                text-shadow: 0 0 45px #1220e4
-    &-right
+                text-shadow: 0 0 55px #12e435
+    &__right
         width: 74%
         background: #2c2b2b
-        padding: 1rem
         border-radius: 2rem
         border: .1rem solid #6e6666
+        padding-left: .5rem
+        position: relative
+        @include respond(tab-port)
+            width: 65%
+        @include respond(phoneL)
+            width: 100%
+            border-radius: 0
+            padding: 0 1rem
+        &-home
+            position: absolute
+            top: 1rem
+            left: 1rem
+            @include respond(phoneL)
+                left: 2rem
+            i
+                opacity: .4
+                &:hover
+                    opacity: 1
         &-list
             font-family: 'Tomorrow'
             font-size: 1.6rem
@@ -85,15 +128,24 @@
             display: flex
             justify-content: center
             padding: 1rem
-            margin-left: 582px
             gap: 3rem
             width: 40%
+            margin-left: auto
             background: #382e2e
-            margin-top: -10px
             border-radius: 0px 20px 0px 20px
             border: 1px solid #6e6666
             border-top: none
             border-right: none
+            @include respond(tab-land)
+                width: 50%
+            @include respond(tab-port)
+                width: 70%
+            @include respond(phoneL)
+                width: 100%
+                border-radius: 0
+                border-right: 1px solid #6e6666
+            @include respond(phoneM)
+                gap: 2rem
             li
                 position: relative
                 height: 100%
@@ -126,16 +178,6 @@
                     &::before,
                     &::after
                         width: 100%
-        &-skills
-            display: flex
-            justify-content: center
-            gap: 4rem
-            width: 100%
-            flex-wrap: wrap
-            li div
-                width: 8rem
-                img
-                    width: 100%
 %line
     content: ''
     position: absolute
@@ -144,4 +186,3 @@
     background-color: #5b628f
     transition: .4s ease
     z-index: 0
-

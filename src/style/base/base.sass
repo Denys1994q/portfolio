@@ -3,11 +3,23 @@
     padding: 0
     box-sizing: border-box
 html
-    font-size: 62.5%
+    font-size: 62.5% // 10px
+    @include respond(tab-land)
+        font-size: 56.25%
+    @include respond(tab-port)
+        font-size: 50% // 8px
+    @include respond(phoneM)
+        font-size: 40% // 6.4px
+    @include respond(big-screen)
+        font-size: 75%
 body
     padding: 2rem
     background-image: linear-gradient(90deg, #1d1a24 0, #050408 50%, #000000 100%)
     color: #ffffff
+    @include respond(tab-port)
+        padding: .5rem
+img
+    max-width: 100%
 input:focus
     outline: none
 a
@@ -31,8 +43,3 @@ button,input,optgroup,select,textarea
     margin: 0
 ul, li
     list-style: none
-.container
-    width: 100%
-    padding: 0
-.active
-    background: #5b628f

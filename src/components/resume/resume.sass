@@ -1,0 +1,65 @@
+.resume__item
+    background: #525252
+    padding: .2rem
+    margin-bottom: 2rem
+.resume__info
+    margin-bottom: 1rem
+    display: inline-flex
+    justify-content: start
+    align-items: center
+    gap: 20px
+    text-transform: uppercase
+    animation-name: opacityAnim
+    animation-duration: 1s
+    animation-timing-function: ease-in-out
+    backface-visibility: hidden
+    margin-left: 1rem
+    &-title
+        margin-top: 12px
+        border-bottom: 2px solid #d6d6d6
+.resume__text
+    margin-bottom: 1rem
+    margin-left: 8rem
+    font-size: 1.3rem
+    animation-name: opacityAnim
+    animation-duration: 1s
+    animation-timing-function: ease-in-out
+    backface-visibility: hidden
+    &-courses
+        margin-left: 8rem
+        display: flex
+        &-item
+            width: 100%
+            animation-name: opacityAnim
+            animation-duration: 1s
+            animation-timing-function: ease-in-out
+            backface-visibility: hidden
+            img
+                width: 100%
+    &-duties-list
+        li
+            position: relative
+            padding-left: 2rem
+            &:before
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translate(-50%, -50%)
+                display: block
+                content: ''
+                width: .8rem
+                height: .8rem
+                background: #ddd349
+                border-radius: 50%
+                z-index: 1
+            &:after
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translate(-50%, -50%)
+                display: block
+                content: ''
+                width: 1rem
+                height: 1rem
+                background: #7e7e7e
+                border-radius: 50%

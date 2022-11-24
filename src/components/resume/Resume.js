@@ -1,60 +1,65 @@
-import udemy from '../../images/udemy.png'
+import udemy from "../../images/udemy.png";
 
 const Resume = () => {
     return (
-        <div>
-            <div>
-                <div className="info">
-                    <i class="fa fa-address-card fa-2x"></i>
-                    <p>Bio:</p>
+        <div className='resume'>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-address-card fa-2x'></i>
+                    <p className='resume__info-title'>Bio:</p>
                 </div>
-                <div className="text">
-                    <p className="birth">Date of birth: 14.09.1994</p>
-                    <p className="place">Live in: Bucha, Kyivska oblast</p>
+                <div className='resume__text'>
+                    <p className='birth'>Date of birth: 14.09.1994</p>
+                    <p className='place'>Live in: Bucha, Kyivska oblast</p>
                 </div>
             </div>
-            <div>
-                <div className="info">
-                    <i class="fa fa-laptop fa-2x"></i>
-                    <p>IT EXPERIENCE:</p>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-laptop fa-2x'></i>
+                    <p className='resume__info-title'>It experience:</p>
                 </div>
-                <div className="text">
-                    <p className="upwork">Freelance: 
-                        <a href=" https://www.upwork.com/freelancers/~017a31f35385ec40b9" target='_blank'>Upwork</a>
+                <div className='resume__text'>
+                    <p className='upwork'>
+                        Freelance:
+                        <a href=' https://www.upwork.com/freelancers/~017a31f35385ec40b9' target='_blank'>
+                            Upwork
+                        </a>
                     </p>
                 </div>
             </div>
-            <div>
-                <div className="info">
-                    <i class="fa fa-book fa-2x"></i>
-                    <p>Front-end studying:</p>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-book fa-2x'></i>
+                    <p className='resume__info-title'>Front-end studying:</p>
                 </div>
-                <div className='text-courses'>
-                    <div className='text-course'><img src={udemy} alt="" /></div>
+                <div className='resume__text-courses'>
+                    <div className='resume__text-courses-item'>
+                        <img src={udemy} alt='' />
+                    </div>
                 </div>
             </div>
-            <div>
-                <div className="info">
-                    <i class="fa fa-graduation-cap fa-2x"></i>
-                    <p>Education</p>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-graduation-cap fa-2x'></i>
+                    <p className='resume__info-title'>Education</p>
                 </div>
-                <div className="text">
+                <div className='resume__text'>
                     <p>National university of 'Kyiv-Mohyla Academy'</p>
                     <p>Political Science</p>
                     <p>Bachelor degree: 2011-2015</p>
                     <p>Master degree: 2015-2017</p>
                 </div>
             </div>
-            <div className="employment">
-                <div className="info">
-                    <i class="fa fa-briefcase fa-2x"></i>
-                    <p>Employment</p>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-briefcase fa-2x'></i>
+                    <p className='resume__info-title'>Employment</p>
                 </div>
-                <div className="text">
+                <div className='resume__text'>
                     <p>2014-2022</p>
                     <p>Political analyst</p>
                     <p>Non-governmental organization 'Committee of Voters of Ukraine'</p>
-                    <ul>
+                    <ul className='resume__text-duties-list'>
                         <li>development of analytical reports during election campaigns</li>
                         <li>communication with international partnets</li>
                         <li>realisation of projects: working on methodology etc.</li>
@@ -66,17 +71,17 @@ const Resume = () => {
                     </ul>
                 </div>
             </div>
-            <div>
-                <div className="info">
-                    <i class="fa fa-language fa-2x"></i>
-                    <p>Languages</p>
+            <div className='resume__item'>
+                <div className='resume__info'>
+                    <i className='fa fa-language fa-2x'></i>
+                    <p className='resume__info-title'>Languages</p>
                 </div>
-                <div className="text">
+                <div className='resume__text'>
                     <p>English: upper-intermediate</p>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Resume;
