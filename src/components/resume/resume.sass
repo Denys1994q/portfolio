@@ -1,3 +1,5 @@
+.resume
+    padding-top: .5rem
 .resume__item
     background: #525252
     padding: .2rem
@@ -25,6 +27,8 @@
     animation-duration: 1s
     animation-timing-function: ease-in-out
     backface-visibility: hidden
+    @include respond(tab-port)
+        font-size: 1.6rem
     &-courses
         margin-left: 8rem
         display: flex
