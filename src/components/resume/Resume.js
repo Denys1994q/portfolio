@@ -3,6 +3,13 @@ import udemy from "../../images/udemy.png";
 const Resume = () => {
     return (
         <div className='resume'>
+            <a
+                target='_blank'
+                className='resume__file'
+                href='https://drive.google.com/file/d/129AlJxeTIi1QeexusP0VmmGkBpBzTNfk/view?usp=share_link'
+                download>
+                CV_Denys_Rybachok.pdf
+            </a>
             <div className='resume__item'>
                 <div className='resume__info'>
                     <i className='fa fa-address-card fa-2x'></i>
