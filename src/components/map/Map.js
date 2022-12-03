@@ -11,7 +11,7 @@ const MapComponent = ({ lat, long }) => {
                 longitude: long,
                 zoom: 3,
             }}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: 200 }}
             mapStyle='mapbox://styles/mapbox/dark-v10'
             mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
             <Marker longitude={long} latitude={lat} anchor='bottom-left'>

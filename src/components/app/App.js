@@ -50,17 +50,21 @@ const App = () => {
             <div className='container'>
                 <div className='first-page'>
                     <div className='first-page__left'>
-                        <div className='first-page__left-img'>
-                            <Link to='/'>
-                                <img src={photo} alt='photo' />
-                            </Link>
+                        <div className='first-page__wrapper'>
+                            <div className='first-page__left-img'>
+                                <Link to='/'>
+                                    <img src={photo} alt='photo' />
+                                </Link>
+                            </div>
+                            <div>
+                                <h1 className='first-page__left-name'>
+                                    <Link to='/'>
+                                        <span>Denys Rybachok</span>
+                                    </Link>
+                                </h1>
+                                <h2 className='first-page__left-position'>{frontEnd}</h2>
+                            </div>
                         </div>
-                        <h1 className='first-page__left-name'>
-                            <Link to='/'>
-                                <span>Denys Rybachok</span>
-                            </Link>
-                        </h1>
-                        <h2 className='first-page__left-position'>{frontEnd}</h2>
                         <ul className='first-page__left-contacts'>{showContacts}</ul>
                         <div className='map'>
                             <MapComponent lat={50.12424} long={27.51087} />

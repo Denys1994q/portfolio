@@ -14,6 +14,11 @@
     align-items: start
     flex-wrap: wrap
     justify-content: space-between
+    &__wrapper
+        @include respond(phoneL)
+            display: flex
+            justify-content: space-around
+            align-items: center
     &__left
         width: 24%
         background: #2c2b2b
@@ -25,11 +30,15 @@
         @include respond(tab-port)
             width: 33%
         @include respond(phoneL)
+            margin-bottom: 1rem
             width: 100%
             border-radius: 0
         &-img
             margin: 0 auto
             max-width: 18rem
+            @include respond(phoneL)
+                max-width: 22rem
+                margin: 0
             img
                 width: 100%
                 border-radius: 50%
@@ -79,7 +88,6 @@
                 flex-wrap: wrap
                 gap: 3rem
                 justify-content: center
-                margin-bottom: 3rem
             li
                 margin-bottom: .4rem
                 a
@@ -95,6 +103,7 @@
             max-width: 25rem
             margin: 1rem auto
             @include respond(phoneL)
+                margin: 2rem auto
                 gap: 5rem
             i
                 color: #6e6666
@@ -196,14 +205,13 @@
     background-color: #5b628f
     transition: .4s ease
     z-index: 0
-.map
-    max-width: 34rem
-    height: 18rem
-    margin: 0 auto
-    margin-bottom: 1rem
-    border-radius: 50%
-    @include respond(tab-port)
-        height: 20rem
-    @include respond(phoneL)
-        max-width: 45rem
-        height: 25rem
+// .map
+    // max-width: 35rem
+    // height: 18rem
+    // margin: 0 auto
+    // margin-bottom: 1rem
+    // @include respond(tab-port)
+    //     height: 20rem
+    // @include respond(phoneL)
+    //     max-width: 45rem
+    //     height: 25rem
