@@ -7,7 +7,7 @@ import { createSpanLetters } from "../skills/Skills";
 import Skills from "../skills/Skills";
 import Portfolio from "../portfolio/Portfolio";
 import Resume from "../resume/Resume";
-// import MapComponent from "../map/Map";
+import MapComponent from "../map/Map";
 
 const App = () => {
     const frontEnd = createSpanLetters("Front-end developer");
@@ -62,9 +62,9 @@ const App = () => {
                         </h1>
                         <h2 className='first-page__left-position'>{frontEnd}</h2>
                         <ul className='first-page__left-contacts'>{showContacts}</ul>
-                        {/* <div className='map'>
+                        <div className='map'>
                             <MapComponent lat={50.12424} long={27.51087} />
-                        </div> */}
+                        </div>
                         <div className='first-page__left-icons'>
                             <div className='first-page__left-icons-icon'>
                                 <a className='facebook' href='https://www.facebook.com/denis.rybachok' target='_blank'>
