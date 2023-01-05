@@ -247,7 +247,6 @@ const Portfolio = () => {
             });
             setFilteredProjects(filteredArr);
         } else {
-            console.log(selectValue);
             selectValue === "all"
                 ? setFilteredProjects(projects)
                 : setFilteredProjects(
