@@ -11,6 +11,7 @@ import rest from "../../images/Rest.png";
 import grid from "../../images/grid.png";
 import flexbox from "../../images/flexbox.png";
 import figma from "../../images/figma.png";
+import ts from "../../images/ts.svg";
 
 export const createSpanLetters = string => {
     let all = [];
@@ -25,7 +26,7 @@ export const createSpanLetters = string => {
 const Skills = () => {
     const aboutSpans = createSpanLetters("Skills");
 
-    const skills = [html, css, js, react, next, redux, sass, gitT, npm, rest, grid, flexbox, figma];
+    const skills = [html, css, js, react, ts, next, redux, sass, gitT, npm, rest, grid, flexbox, figma];
 
     const showSkills = skills.map((item, index) => {
         return (

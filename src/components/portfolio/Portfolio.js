@@ -2,6 +2,7 @@ import pokemons from "../../images/pokemons.png";
 import pets from "../../images/pets.png";
 import arsenal from "../../images/arsenal.png";
 import chat from "../../images/chat.png";
+import jobs from "../../images/jobs.png";
 import converter from "../../images/converter.png";
 import marvel from "../../images/marvel.png";
 import movies from "../../images/movies.png";
@@ -12,8 +13,10 @@ import heroes from "../../images/heroes.png";
 
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
+import { useState } from "react";
 
 const Portfolio = () => {
+    const [selectValue, setSelectValue] = useState("all");
     const projects = [
         {
             name: "Pokemons",
@@ -24,6 +27,7 @@ const Portfolio = () => {
             github: "https://github.com/Denys1994q/Pokemons-Redux",
             technologies: [
                 "react",
+                "redux",
                 "redux-toolkit",
                 "sass",
                 "grid",
@@ -34,7 +38,7 @@ const Portfolio = () => {
                 "react-transition-group",
                 "react-loading-skeleton",
                 "react-font-awesome",
-                "vercel",
+                "git",
             ],
         },
         {
@@ -44,18 +48,16 @@ const Portfolio = () => {
             deploy: "https://arsenal1994q.vercel.app/",
             github: "https://github.com/Denys1994q/Arsenal-React",
             technologies: [
+                "next",
                 "react",
                 "redux-toolkit",
-                "next",
                 "sass",
-                "flex",
                 "grid",
                 "git",
                 "fetch",
                 "omdb-api",
                 "weather-api",
                 "marvel-api",
-                "vercel",
                 "react-image-magnify",
             ],
         },
@@ -64,21 +66,29 @@ const Portfolio = () => {
             description: "",
             img: pets,
             pageSpeed: 92,
-            deploy: "https://petsapi1994.herokuapp.com/",
+            deploy: "https://cats-page-eosin.vercel.app/",
             github: "https://github.com/Denys1994q/test-task-CatsAPI",
-            technologies: ["react", "react-router-dom", "sass", "flex", "grid", "git", "fetch", "heroku"],
+            technologies: ["react", "react-router-dom", "sass", "flex", "grid", "git", "post", "fetch"],
+        },
+        {
+            name: "Jobs",
+            description: "",
+            img: jobs,
+            pageSpeed: 100,
+            deploy: "https://jobs-tawny.vercel.app/",
+            github: "https://github.com/Denys1994q/jobs",
+            technologies: ["next", "react", 'redux', "redux-toolkit", "sass", "git", "fetch"],
         },
         {
             name: "Chat",
             description: "",
             img: chat,
             pageSpeed: 98,
-            deploy: "https://chat199.herokuapp.com/",
+            deploy: "https://chat-react-henna.vercel.app/",
             github: "https://github.com/Denys1994q/chat_React",
             technologies: [
                 "react",
                 "sass",
-                "flex",
                 "git",
                 "fetch",
                 "chuck-norris-jokes-api",
@@ -92,17 +102,7 @@ const Portfolio = () => {
             img: marvel,
             deploy: "",
             github: "https://github.com/Denys1994q/Project_React_marvelComics",
-            technologies: [
-                "react",
-                "node-sass",
-                "less",
-                "react-transition-group",
-                "flex",
-                "git",
-                "fetch",
-                "helmet",
-                "marvel-api",
-            ],
+            technologies: ["react", "sass", "react-transition-group", "git", "fetch", "helmet", "marvel-api"],
         },
         {
             name: "Movies API",
@@ -117,7 +117,7 @@ const Portfolio = () => {
             img: converter,
             deploy: "",
             github: "https://github.com/Denys1994q/currency_converter_REACT",
-            technologies: ["react", "flex", "git", "fetch", "currencies-api", "heroku"],
+            technologies: ["react", "flex", "git", "fetch", "currencies-api"],
         },
         {
             name: "magic heroes",
@@ -133,7 +133,7 @@ const Portfolio = () => {
             img: shop,
             deploy: "",
             github: "https://github.com/Denys1994q/React-Shop",
-            technologies: ["react", "flex", "git", "fetch", "currencies-api", "heroku"],
+            technologies: ["react", "flex", "git", "fetch", "currencies-api"],
         },
         {
             name: "employers",
@@ -149,9 +149,11 @@ const Portfolio = () => {
             img: baloons,
             deploy: "",
             github: "https://github.com/Denys1994q/HTML-CSS_Ballons",
-            technologies: ["landing", "html", "sass", "flex", "git", "git"],
+            technologies: ["html", "sass", "flex", "git", "git"],
         },
     ];
+
+    const [filteredProjects, setFilteredProjects] = useState(projects);
 
     const options = {
         plugins: {
@@ -168,7 +170,7 @@ const Portfolio = () => {
         },
     };
 
-    const showProjects = projects.map((item, i) => {
+    const showProjects = filteredProjects.map((item, i) => {
         const data = {
             labels: ["page speed", ""],
             datasets: [
@@ -214,10 +216,10 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <ul className='potrfolio-grid-item-tecnhs'>
-                    {item.technologies.map((it, index) => {
+                    {item.technologies.map((tech, index) => {
                         return (
-                            <li key={index} className='potrfolio-grid-item-tecnhs-item'>
-                                {it}
+                            <li key={index} className={`potrfolio-grid-item-tecnhs-item ${tech}`}>
+                                {tech}
                             </li>
                         );
                     })}
@@ -226,7 +228,59 @@ const Portfolio = () => {
         );
     });
 
-    return <div className='potrfolio-grid'>{showProjects}</div>;
+    const filterProjects = e => {
+        setSelectValue(e.target.value);
+        if (e.target.value === "all") {
+            setFilteredProjects(projects);
+        } else {
+            const filteredArr = projects.filter(project => {
+                return project.technologies.indexOf(e.target.value) > -1;
+            });
+            setFilteredProjects(filteredArr);
+        }
+    };
+
+    const showDeployedOnly = e => {
+        if (e.target.checked) {
+            const filteredArr = filteredProjects.filter(project => {
+                return project.deploy;
+            });
+            setFilteredProjects(filteredArr);
+        } else {
+            console.log(selectValue);
+            selectValue === "all"
+                ? setFilteredProjects(projects)
+                : setFilteredProjects(
+                      projects.filter(project => {
+                          return project.technologies.indexOf(selectValue) > -1;
+                      })
+                  );
+        }
+    };
+
+    return (
+        <>
+            <select value={selectValue} className='selectSortProjects' onChange={e => filterProjects(e)}>
+                <option value='all'>all</option>
+                <option value='react'>react</option>
+                <option value='next'>next</option>
+                <option value='redux'>redux</option>
+            </select>
+            <div className='checkbox'>
+                <input
+                    onChange={e => showDeployedOnly(e)}
+                    id='checkProjects'
+                    type='checkbox'
+                    className='checkbox__input'
+                />
+                <label htmlFor='checkProjects' className='checkbox__label'>
+                    Deployed only
+                </label>
+            </div>
+
+            <div className='potrfolio-grid'>{showProjects}</div>
+        </>
+    );
 };
 
 export default Portfolio;

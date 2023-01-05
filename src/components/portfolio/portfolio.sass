@@ -126,3 +126,73 @@
     background: #f0efef
 ::-webkit-scrollbar-thumb
     background: #a1a1a1
+
+// technologies-icons
+.react
+    background: #085dcc
+    border: none
+.react-router-dom
+    background: #4574b1
+    border: none
+.next
+    background: #171718
+    border: none
+.redux-toolkit, .redux
+    background: #1e4a83
+    border: none
+.sass
+    background: #e63434
+    border: none
+.chart-js, .react-select, .react-lazy-load, .react-spinners, .react-transition-group, .react-loading-skeleton, .react-font-awesome, .react-image-magnify, .react-google-login, .gapi-script, .materialize-css, .helmet
+    background: #fdfb5e
+    color: #2b2b2b
+.omdb-api, .weather-api, .marvel-api, .chuck-norris-jokes-api, .currencies-api
+    background: #0c6601
+.git, .post, .get, .fetch
+    background: #444444
+
+// select
+.selectSortProjects
+    background: #5a5a5a
+    font-size: 1.4rem
+    padding: .4rem
+    border: none
+    margin: 0 2rem 0 1rem
+
+// checkbox
+.checkbox
+    display: inline-block
+    position: relative
+    &__input
+        appearance: none
+        -webkit-appearance: none
+        position: absolute
+        &:checked + .checkbox__label::after
+            opacity: 1
+    &__label
+        font-size: 1.2rem
+        color: #ddd
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: 1.2rem
+            height: 1.2rem
+            background: #e2e1e1
+            margin-right: .5rem
+            z-index: 1
+            position: absolute
+            top: 0
+            left: 0
+        &::after
+            content: ''
+            width: .8rem
+            height: .8rem
+            display: block
+            background: #0ea828
+            z-index: 2
+            position: absolute
+            top: .2rem
+            left: .2rem
+            border-radius: 50%
+            opacity: 0
