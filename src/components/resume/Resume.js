@@ -39,11 +39,15 @@ const Resume = () => {
                     <i className='fa fa-book fa-2x'></i>
                     <p className='resume__info-title'>Front-end studying:</p>
                 </div>
-                <div className='resume__text-courses'>
-                    <div className='resume__text-courses-item'>
-                        <img src={udemy} alt='' />
-                    </div>
-                </div>
+                <ul className='resume__text resume__text-duties-list'>
+                    <p>Udemy online courses (June 2021 - ...):</p>
+                    <li>Full course on JavaScript + React - from scratch to the result</li>
+                    <li>Practical JavaScript (Advanced Level)</li>
+                    <li>Front-end for advanced (online-cinema)</li>
+                    <li>Web-site creation in 2022</li>
+                    <li>Intensive course React-2022</li>
+                    <li>TypeScript from basics</li>
+                </ul>
             </div>
             <div className='resume__item'>
                 <div className='resume__info'>

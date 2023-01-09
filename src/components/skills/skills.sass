@@ -1,5 +1,5 @@
 .skills
-    &__title
+    &__mainTitle
         font-size: 2.6rem
         display: inline-block
         padding: 2rem 2rem 1rem 0
@@ -31,26 +31,20 @@
         span:nth-child(7)
             animation-delay: .1s
     &__list
-        width: 65%
-        margin: 0 auto
-        margin-bottom: 5rem
         display: flex
-        justify-content: center
-        align-items: center
-        gap: 4rem
         flex-wrap: wrap
-        padding: .3rem
-        @include respond(tab-land)
-            width: 100%
-            margin-bottom: 10rem
-        @include respond(phoneL)
-            margin-bottom: 3rem
-            gap: 2rem
-            justify-content: start
-        img
-            width: 8rem
-            height: 8rem
-            object-fit: contain
-            @include respond(big-screen)
-                width: 10rem
-                height: 10rem
+        gap: 2rem
+        font-size: 1.4rem
+        div
+            padding: .3rem
+    &__title
+        text-align: center
+        font-size: 1.2rem
+        padding: .2rem
+        background: #333333
+        color: #9b9b9b
+    &__item
+        padding: .5rem
+        text-align: center
+        background: #4a4b28
+        margin-bottom: .5rem
