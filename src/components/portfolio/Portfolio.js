@@ -6,6 +6,8 @@ import { projects } from "./data";
 
 const Portfolio = () => {
     const [selectValue, setSelectValue] = useState("all");
+    const [newProjectsValue, setNewProjectsValue] = useState(false);
+    const [deployedProjectsValue, setDeployedProjectsValue] = useState(false);
 
     const [filteredProjects, setFilteredProjects] = useState(projects);
 
@@ -84,6 +86,10 @@ const Portfolio = () => {
 
     const filterProjects = e => {
         setSelectValue(e.target.value);
+
+        setDeployedProjectsValue(false);
+        setNewProjectsValue(false);
+
         if (e.target.value === "all") {
             setFilteredProjects(projects);
         } else {
@@ -94,39 +100,85 @@ const Portfolio = () => {
         }
     };
 
+    // фільтр: показує лише задеплоєні проекти
     const showDeployedOnly = e => {
         if (e.target.checked) {
+            setDeployedProjectsValue(true);
             const filteredArr = filteredProjects.filter(project => {
                 return project.deploy;
             });
             setFilteredProjects(filteredArr);
         } else {
-            selectValue === "all"
-                ? setFilteredProjects(projects)
-                : setFilteredProjects(
-                      projects.filter(project => {
-                          return project.technologies.indexOf(selectValue) > -1;
-                      })
-                  );
+            setDeployedProjectsValue(false);
+
+            if (newProjectsValue) {
+                // all
+                const copy = [...projects];
+                let sortedArr = copy.sort((a, b) => {
+                    return b.index - a.index;
+                });
+                // not all
+                let s = projects.filter(project => {
+                    return project.technologies.indexOf(selectValue) > -1;
+                });
+                let sSortedArr = s.sort((a, b) => {
+                    return b.index - a.index;
+                });
+                selectValue === "all" ? setFilteredProjects(sortedArr) : setFilteredProjects(sSortedArr);
+            } else {
+                selectValue === "all"
+                    ? setFilteredProjects(projects)
+                    : setFilteredProjects(
+                          projects.filter(project => {
+                              return project.technologies.indexOf(selectValue) > -1;
+                          })
+                      );
+            }
         }
     };
 
+    // сортування: показує нові проекти спочатку
     const showNewFirst = e => {
         let sortedArr;
         const copy = [...filteredProjects];
+        // якщо checked
         if (e.target.checked) {
+            setNewProjectsValue(true);
             sortedArr = copy.sort((a, b) => {
                 return b.index - a.index;
             });
             setFilteredProjects(sortedArr);
         } else {
-            selectValue === "all"
-                ? setFilteredProjects(projects)
-                : setFilteredProjects(
-                      projects.filter(project => {
-                          return project.technologies.indexOf(selectValue) > -1;
-                      })
-                  );
+            // якщо !checked
+            setNewProjectsValue(false);
+            // якщо newProjectsValue !checked, а deployed checked
+            if (deployedProjectsValue) {
+                const copy2 = projects.filter(project => {
+                    return project.technologies.indexOf(selectValue) > -1;
+                });
+
+                selectValue === "all"
+                    ? setFilteredProjects(
+                          projects.filter(project => {
+                              return project.deploy;
+                          })
+                      )
+                    : setFilteredProjects(
+                          copy2.filter(project => {
+                              return project.deploy;
+                          })
+                      );
+                // показує задеплоєні, але в порядку нових
+            } else {
+                // якщо newProjectsValue !checked і deployed !checked
+                selectValue === "all"
+                    ? setFilteredProjects(projects)
+                    : setFilteredProjects(
+                          projects.filter(project => {
+                              return project.technologies.indexOf(selectValue) > -1;
+                          })
+                      );
+            }
         }
     };
 
@@ -140,14 +192,26 @@ const Portfolio = () => {
                 <option value='redux'>redux</option>
             </select>
             <div className='checkbox'>
-                <input onChange={e => showDeployedOnly(e)} id='deployed' type='checkbox' className='checkbox__input' />
+                <input
+                    checked={deployedProjectsValue}
+                    onChange={e => showDeployedOnly(e)}
+                    id='deployed'
+                    type='checkbox'
+                    className='checkbox__input'
+                />
                 <label htmlFor='deployed' className='checkbox__label'>
                     Deployed
                 </label>
             </div>
             <div className='checkbox'>
-                <input onChange={e => showNewFirst(e)} id='new' type='checkbox' className='checkbox__input' />
-                <label htmlFor='new' className='checkbox__label'>
+                <input
+                    checked={newProjectsValue}
+                    onChange={e => showNewFirst(e)}
+                    id='new'
+                    type='checkbox'
+                    className='checkbox__input'
+                />
+                <label htmlFor='new' className='checkbox__label checkbox__labelNewFirst'>
                     New first
                 </label>
             </div>
