@@ -11,8 +11,30 @@ import baloons from "../../images/baloons.png";
 import employers from "../../images/employers.png";
 import shop from "../../images/shop.png";
 import heroes from "../../images/heroes.png";
+import blog from "../../images/blog.png";
+import news from "../../images/news.png";
 
 export const projects = [
+    {
+        index: 14,
+        name: "Blog",
+        description: "",
+        img: blog,
+        pageSpeed: 98,
+        deploy: "https://blog-frontend1994.vercel.app/",
+        github: "https://github.com/Denys1994q/blog_frontend",
+        technologies: ["node", "express", "mongoDb", "react", "typescript", "material-design", "git"],
+    },
+    {
+        index: 13,
+        name: "News",
+        description: "",
+        img: news,
+        pageSpeed: 98,
+        deploy: "https://news-zeta-nine.vercel.app/",
+        github: "https://github.com/Denys1994q/news",
+        technologies: ["react", "typescript", "redux", "redux-toolkit", "material-design", "sass", "git"],
+    },
     {
         index: 10,
         name: "Pokemons",
@@ -105,15 +127,7 @@ export const projects = [
         pageSpeed: 98,
         deploy: "https://chat-react-henna.vercel.app/",
         github: "https://github.com/Denys1994q/chat_React",
-        technologies: [
-            "react",
-            "sass",
-            "git",
-            "fetch",
-            "chuck-norris-jokes-api",
-            "react-google-login",
-            "gapi-script",
-        ],
+        technologies: ["react", "sass", "git", "fetch", "chuck-norris-jokes-api", "react-google-login", "gapi-script"],
     },
     {
         index: 5,

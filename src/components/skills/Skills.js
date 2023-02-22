@@ -25,9 +25,13 @@ const Skills = () => {
         { title: "Version Control Systems", items: ["Git", "GitHub"] },
         { title: "Package managers", items: ["npm"] },
         { title: "Formatters", items: ["Prettier"] },
-        { title: "", items: ["Rest API"] },
         { title: "", items: ["Figma"] },
         { title: "", items: ["Responsive design"] },
+        { title: "Design systems", items: ["Material Design"] },
+        { title: "Server Development", items: ["Node"] },
+        { title: "Server-side frameworks", items: ["Express"] },
+        { title: "Databases", items: ["MongoDB"] },
+        { title: "HTTP", items: ["Rest API"] },
     ];
 
     const showSkills = skills.map((skill, index) => {

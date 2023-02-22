@@ -186,6 +186,7 @@ const Portfolio = () => {
         <>
             <select value={selectValue} className='selectSortProjects' onChange={e => filterProjects(e)}>
                 <option value='all'>all</option>
+                <option value='express'>express</option>
                 <option value='react'>react</option>
                 <option value='next'>next</option>
                 <option value='typescript'>typescript</option>

@@ -76,7 +76,7 @@ const App = () => {
                                 </a>
                             </div>
                             <div className='first-page__left-icons-icon'>
-                                <a className='git' href='https://github.com/Denys1994q' target='_blank'>
+                                <a className='gitLink' href='https://github.com/Denys1994q' target='_blank'>
                                     <i className='fab fa-github fa-3x'></i>
                                 </a>
                             </div>

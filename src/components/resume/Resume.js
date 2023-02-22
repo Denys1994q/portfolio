@@ -6,7 +6,7 @@ const Resume = () => {
             <a
                 target='_blank'
                 className='resume__file'
-                href='https://drive.google.com/file/d/129AlJxeTIi1QeexusP0VmmGkBpBzTNfk/view?usp=share_link'
+                href='https://drive.google.com/file/d/18axEP8lVwBu1-wqSeLL9T4uBuuhWhK3_/view?usp=share_link'
                 download>
                 CV_Denys_Rybachok.pdf
             </a>
