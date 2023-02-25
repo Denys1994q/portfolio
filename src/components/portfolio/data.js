@@ -23,7 +23,7 @@ export const projects = [
         pageSpeed: 98,
         deploy: "https://blog-frontend1994.vercel.app/",
         github: "https://github.com/Denys1994q/blog_frontend",
-        technologies: ["node", "express", "mongoDb", "react", "typescript", "material-design", "git"],
+        technologies: ["node", "express", "express-validator", "mongoDb", "mongoose", "jwt", "multer", "cloudinary", "react", "typescript", "material-design", "git"],
     },
     {
         index: 13,
