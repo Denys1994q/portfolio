@@ -22,6 +22,7 @@ const Skills = () => {
         { title: "CSS Preprocessors", items: ["Sass"] },
         { title: "Modern CSS", items: ["CSS Modules"] },
         { title: "Methodologies", items: ["BEM"] },
+        { title: "Forms", items: ["Formik", "React-hook-form"] },
         { title: "Version Control Systems", items: ["Git", "GitHub"] },
         { title: "Package managers", items: ["npm"] },
         { title: "Formatters", items: ["Prettier"] },
@@ -32,6 +33,7 @@ const Skills = () => {
         { title: "Server-side frameworks", items: ["Express"] },
         { title: "Databases", items: ["MongoDB"] },
         { title: "HTTP", items: ["Rest API"] },
+        { title: "", items: ["WebSockets"] },
     ];
 
     const showSkills = skills.map((skill, index) => {
