@@ -58,6 +58,18 @@ const Portfolio = () => {
                     <a className='potrfolio-grid-item-title-icon' href={item.github} target='_blank'>
                         <i className='fab fa-github fa-2x'></i>
                     </a>
+                    {item.githubBackend && (
+                        <>
+                            <div style={{ position: "relative" }}>
+                                <a className='potrfolio-grid-item-title-icon' href={item.githubBackend} target='_blank'>
+                                    <i className='fab fa-github fa-2x'></i>
+                                </a>
+                                <span style={{ position: "absolute", top: "33px", left: "-7px", fontSize: "11px" }}>
+                                    server
+                                </span>
+                            </div>
+                        </>
+                    )}
                 </div>
                 <div className='potrfolio-grid-item-img'>
                     <img className='potrfolio-grid-item-img-show' src={item.img} alt='' />

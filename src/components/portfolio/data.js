@@ -13,8 +13,36 @@ import shop from "../../images/shop.png";
 import heroes from "../../images/heroes.png";
 import blog from "../../images/blog.png";
 import news from "../../images/news.png";
+import live_chat from "../../images/live_chat.png";
 
 export const projects = [
+    {
+        index: 15,
+        name: "Live-Chat",
+        description: "",
+        img: live_chat,
+        pageSpeed: 100,
+        deploy: "https://live-chat-theta.vercel.app/",
+        github: "https://github.com/Denys1994q/chat_frontend",
+        githubBackend: "https://github.com/Denys1994q/chat_backend",
+        technologies: [
+            "websockets",
+            "node",
+            "express",
+            "express-validator",
+            "mongoDb",
+            "mongoose",
+            "jwt",
+            "multer",
+            "cloudinary",
+            "react",
+            "typescript",
+            "redux",
+            "redux-toolkit",
+            "material-design",
+            "git",
+        ],
+    },
     {
         index: 14,
         name: "Blog",
@@ -23,6 +51,7 @@ export const projects = [
         pageSpeed: 98,
         deploy: "https://blog-frontend1994.vercel.app/",
         github: "https://github.com/Denys1994q/blog_frontend",
+        githubBackend: "https://github.com/Denys1994q/blog_backend",
         technologies: [
             "node",
             "express",
