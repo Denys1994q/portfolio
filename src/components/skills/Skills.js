@@ -16,10 +16,10 @@ const Skills = () => {
         { title: "", items: ["CSS"] },
         { title: "", items: ["JavaScript", "TypeScript"] },
         { title: "JavaScript Frameworks", items: ["React", "Angular"] },
-        { title: "State Managers", items: ["Redux"] },
+        { title: "State Managers", items: ["Redux", "Recoil"] },
         { title: "Server Side Rendering", items: ["Next.js"] },
         { title: "CSS Preprocessors", items: ["Sass"] },
-        { title: "Modern CSS", items: ["CSS Modules"] },
+        { title: "Modern CSS", items: ["CSS Modules", "Styled Components"] },
         { title: "Methodologies", items: ["BEM"] },
         { title: "Forms", items: ["Formik", "React-hook-form"] },
         { title: "Version Control Systems", items: ["Git", "GitHub"] },
@@ -31,7 +31,7 @@ const Skills = () => {
         { title: "Server Development", items: ["Node"] },
         { title: "Server-side frameworks", items: ["Express"] },
         { title: "Databases", items: ["MongoDB"] },
-        { title: "HTTP", items: ["Rest API"] },
+        { title: "HTTP", items: ["Rest API", "GraphQl"] },
         { title: "", items: ["WebSockets"] },
     ];
 

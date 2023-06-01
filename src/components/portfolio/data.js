@@ -15,7 +15,7 @@ import blog from "../../images/blog.png";
 import news from "../../images/news.png";
 import live_chat from "../../images/live_chat.png";
 import rick_morty from "../../images/rick-morty.png";
-
+import space from "../../images/space.png";
 
 export const projects = [
     {
@@ -26,14 +26,7 @@ export const projects = [
         pageSpeed: 99,
         deploy: "https://rick-morty-extended.vercel.app/",
         github: "https://github.com/Denys1994q/rick-morty-extended",
-        technologies: [
-            "typescript",
-            "angular",
-            "angular-router",
-            "angular-material",
-            "rick-morty-api",
-            "sass"
-        ],
+        technologies: ["typescript", "angular", "angular-router", "angular-material", "rick-morty-api", "sass"],
     },
     {
         index: 15,
@@ -152,6 +145,16 @@ export const projects = [
             "git",
             "fetch",
         ],
+    },
+    {
+        index: 17,
+        name: "Space App",
+        description: "",
+        img: space,
+        pageSpeed: 90,
+        deploy: "https://space-x-beta.vercel.app/",
+        github: "https://github.com/Denys1994q/spaceX",
+        technologies: ["typescript", "react", "styled-components", "graphQl", "Apollo", "Atomic design", "Recoil"],
     },
     {
         index: 13,
