@@ -16,7 +16,7 @@ const Skills = () => {
         { title: "", items: ["CSS"] },
         { title: "", items: ["JavaScript", "TypeScript"] },
         { title: "JavaScript Frameworks", items: ["React", "Angular"] },
-        { title: "State Managers", items: ["Redux", "Recoil"] },
+        { title: "State Managers", items: ["Redux", "Recoil", "NgRx"] },
         { title: "Server Side Rendering", items: ["Next.js"] },
         { title: "CSS Preprocessors", items: ["Sass"] },
         { title: "Modern CSS", items: ["CSS Modules", "Styled Components"] },

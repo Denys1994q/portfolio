@@ -3,18 +3,13 @@ import pets from "../../images/pets.png";
 import arsenal from "../../images/arsenal.png";
 import games from "../../images/games.png";
 import chat from "../../images/chat.png";
-import jobs from "../../images/jobs.png";
 import converter from "../../images/converter.png";
 import marvel from "../../images/marvel.png";
-import movies from "../../images/movies.png";
-import baloons from "../../images/baloons.png";
-import employers from "../../images/employers.png";
-import shop from "../../images/shop.png";
-import heroes from "../../images/heroes.png";
 import blog from "../../images/blog.png";
 import news from "../../images/news.png";
 import live_chat from "../../images/live_chat.png";
 import rick_morty from "../../images/rick-morty.png";
+import news_angular from "../../images/news_angular.png";
 import space from "../../images/space.png";
 
 export const projects = [
@@ -80,6 +75,16 @@ export const projects = [
             "material-design",
             "git",
         ],
+    },
+    {
+        index: 18,
+        name: "News",
+        description: "",
+        img: news_angular,
+        pageSpeed: 90,
+        deploy: "https://news-angular-gamma.vercel.app/",
+        github: "https://github.com/Denys1994q/news-angular",
+        technologies: ["typescript", "angular", "angular-router", "angular-material", "rxjs", "ngrx", "sass"],
     },
     {
         index: 10,
@@ -156,16 +161,16 @@ export const projects = [
         github: "https://github.com/Denys1994q/spaceX",
         technologies: ["typescript", "react", "styled-components", "graphQl", "Apollo", "Atomic design", "Recoil"],
     },
-    // {
-    //     index: 13,
-    //     name: "News",
-    //     description: "",
-    //     img: news,
-    //     pageSpeed: 98,
-    //     deploy: "https://news-zeta-nine.vercel.app/",
-    //     github: "https://github.com/Denys1994q/news",
-    //     technologies: ["react", "typescript", "redux", "redux-toolkit", "material-design", "sass", "git"],
-    // },
+    {
+        index: 13,
+        name: "News",
+        description: "",
+        img: news,
+        pageSpeed: 98,
+        deploy: "https://news-zeta-nine.vercel.app/",
+        github: "https://github.com/Denys1994q/news",
+        technologies: ["react", "typescript", "redux", "redux-toolkit", "material-design", "sass", "git"],
+    },
     {
         index: 8,
         name: "Pets",
