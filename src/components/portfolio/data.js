@@ -11,8 +11,19 @@ import live_chat from "../../images/live_chat.png";
 import rick_morty from "../../images/rick-morty.png";
 import news_angular from "../../images/news_angular.png";
 import space from "../../images/space.png";
+import cats from "../../images/cats.png";
 
 export const projects = [
+    {
+        index: 19,
+        name: "Cats",
+        description: "",
+        img: cats,
+        pageSpeed: 100,
+        deploy: "https://cats-eosin.vercel.app/",
+        github: "https://github.com/Denys1994q/cats",
+        technologies: ["typescript", "next", "pets-api", "grid", "sass"],
+    },
     {
         index: 16,
         name: "Rick-Morty",
@@ -119,7 +130,6 @@ export const projects = [
         github: "https://github.com/Denys1994q/Arsenal-React",
         technologies: [
             "next",
-            "react",
             "redux-toolkit",
             "sass",
             "grid",
@@ -140,7 +150,6 @@ export const projects = [
         github: "https://github.com/Denys1994q/games",
         technologies: [
             "next",
-            "react",
             "typescript",
             "freetogame-api",
             "sass-modules",
