@@ -12,8 +12,34 @@ import rick_morty from "../../images/rick-morty.png";
 import news_angular from "../../images/news_angular.png";
 import space from "../../images/space.png";
 import cats from "../../images/cats.png";
+import rozetka from "../../images/rozetka.png";
 
 export const projects = [
+    {
+        index: 20,
+        name: "Rozetka clone",
+        description: "",
+        img: rozetka,
+        pageSpeed: 96,
+        deploy: "https://rozetka-clone.vercel.app/",
+        github: "https://github.com/Denys1994q/rozetka_clone",
+        githubBackend: "https://github.com/Denys1994q/rozetka-server",
+        technologies: [
+            "angular",
+            "typescript",
+            "angular-material",
+            "angular-forms",
+            "angular-router",
+            "node",
+            "express",
+            "express-validator",
+            "google-passport",
+            "facebook-passport",
+            "mongoDb",
+            "mongoose",
+            "jwt",
+        ],
+    },
     {
         index: 19,
         name: "Cats",
