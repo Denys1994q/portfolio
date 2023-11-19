@@ -27,6 +27,7 @@ export const projects = [
         technologies: [
             "angular",
             "typescript",
+            "ssr",
             "angular-material",
             "angular-forms",
             "angular-router",
@@ -34,7 +35,6 @@ export const projects = [
             "express",
             "express-validator",
             "google-passport",
-            "facebook-passport",
             "mongoDb",
             "mongoose",
             "jwt",
